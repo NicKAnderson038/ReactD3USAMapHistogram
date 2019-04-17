@@ -2,7 +2,7 @@
 
 <br>
 
-## **_ [Sample React D3 Applicatoion](https://nickanderson038.github.io/ReactD3USAMapHistogram) _**
+## **_ [Sample React D3 Applicatoion](https://nickanderson038.github.io/ReactD3USAMapHistogram) _** Click for web view.
 
 <br>
 
