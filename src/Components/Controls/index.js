@@ -11,7 +11,21 @@ class Controls extends Component {
     USstate: '*'
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    let [year, USstate, jobTitle] = window.location.hash
+      .replace('#', '')
+      .split('-')
+
+    if (year !== '*' && year) {
+      this.updateYearFilter(Number(year))
+    }
+    if (USstate !== '*' && USstate) {
+      this.updateUSstateFilter(USstate)
+    }
+    if (jobTitle !== '*' && jobTitle) {
+      this.updateJobTitleFilter(jobTitle)
+    }
+  }
 
   updateYearFilter = (year, reset) => {
     let filter = d => d.submit_date.getFullYear() === year
@@ -65,7 +79,11 @@ class Controls extends Component {
   }
 
   reportUpdateUpTheChain() {
-    window.location.hash = [this.state.year || '*'].join('-')
+    window.location.hash = [
+      this.state.year || '*',
+      this.state.USstate || '*',
+      this.state.jobTitle || '*'
+    ].join('-')
 
     this.props.updateDataFilter(
       (filters => {
