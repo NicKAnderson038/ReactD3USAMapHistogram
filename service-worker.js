@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ReactD3USAMapHistogram/build/precache-manifest.5bb4d069c6cfce3c3fedb610aea9e864.js"
+  "/ReactD3USAMapHistogram/precache-manifest.aca19e424bae19d69eb9e47956ed9e9b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/ReactD3USAMapHistogram/build/index.html", {
+workbox.routing.registerNavigationRoute("/ReactD3USAMapHistogram/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
