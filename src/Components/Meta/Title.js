@@ -45,6 +45,7 @@ class Title extends Component {
   }
 
   get format() {
+    // format numbers using fake linear scale
     return scaleLinear()
       .domain(d3extent(this.props.data, d => d.base_salary))
       .tickFormat()
